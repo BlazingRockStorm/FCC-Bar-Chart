@@ -1,3 +1,3 @@
 # FCC Bar Chart
 
-FCC project
+FCC project. This project using D3 and React

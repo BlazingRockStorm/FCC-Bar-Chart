@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as d3 from 'd3';
+
+var formatCurrency = d3.format("$,.2f");
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      description: ''
+    };
+  }
+
+  componentWillMount() {
+    d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json", response => {
+      this.setState({ description: response.description });
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+    <div className="container">  
+      <div className="header">Gross Domestic Product</div>
+      <svg className="chart"></svg>
+      <div className="notes">{this.state.description}</div>
+      <div className="tooltip"><b>Header</b><br /><span>Val</span></div>
+    </div>
+    
     );
   }
 }

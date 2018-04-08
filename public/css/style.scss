@@ -1,46 +1,49 @@
 /* SVG Style */
 .bar {
-    fill: green;
-  }
+  fill: green;
+}
 
-  .axis text {
-    font: 10px sans-serif;
-  }
+.axis text {
+  font: 10px sans-serif;
+}
 
-  .axis path,
-  .axis line {
+.axis{ 
+  path,line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
   }
+}
 
-  .mouseover {
-    fill: lightsteelblue;
-  }
+.mouseover {
+  fill: lightsteelblue;
+}
 
   /* HTML Style */
 
-  .tooltip {
-    position: absolute;
-    background-color: rgb(142, 253, 142);
-    height: 40px;
-    width: 150px;
-    display: none;
-    border-radius: 5px;
-    padding: 5px;
-  }
+.tooltip {
+  position: absolute;
+  background-color: rgb(142, 253, 142);
+  height: 40px;
+  width: 150px;
+  display: none;
+  border-radius: 5px;
+  padding: 5px;
+}
 
-  .header {
-    text-align: center;
-    color: steelblue;
-    font-size: 2.5em;
-    font-family: sans-serif
-  }
+.header {
+  text-align: center;
+  color: steelblue;
+  font-size: 2.5em;
+  font-family: sans-serif;
+}
 
-  .notes {
-    width: 960px;
-    text-align: center;
-    color: steelblue;
-    font-size: 0.8em;
-    font-family: sans-serif
-  }
+.notes {
+  width: 960px;
+  text-align: center;
+  color: steelblue;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}

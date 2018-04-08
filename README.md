@@ -1,3 +1,3 @@
-#FCC Bar Chart
+# FCC Bar Chart
 
 FCC project

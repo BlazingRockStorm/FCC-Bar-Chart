@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import * as d3 from 'd3';
+import * as d3 from 'd3';
 
 class App extends Component {
   constructor(props){
@@ -12,15 +12,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json").then(response => {
-      let api = response.data ;
+    d3.json("https://cdn.rawgit.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json")
+    .then( response => {
       this.setState({ 
-        description: api.description,
-        data: api.data[1][0] 
+        description: response.description,
+        data: response.data[1][0]  
       });
-      console.log(api.data[1]);
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err)); 
   }
 
   render() {

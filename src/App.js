@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    d3.json("https://cdn.rawgit.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json")
+    d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json")
     .then( response => {
       this.setState({ 
         description: response.description,

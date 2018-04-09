@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
+import GDPList from './GDPList';
 
 class App extends Component {
   constructor(props){
@@ -15,7 +16,7 @@ class App extends Component {
     .then( response => {
       this.setState({ 
         description: response.description,
-        data: response.data[1][0]  
+        data: response.data 
       });
     })
     .catch(err => console.log(err)); 
@@ -26,7 +27,7 @@ class App extends Component {
     <div className="container">  
       <div className="header">Gross Domestic Product</div>
       <svg className="chart"></svg>
-      <div>{this.state.data}</div>
+      <GDPList list={this.state.data} />
       <div className="notes">{this.state.description}</div>
       <div className="tooltip"><b>Header</b><br /><span>Val</span></div>
     </div>

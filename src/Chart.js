@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class Chart extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
     }
     
     render() {

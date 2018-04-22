@@ -27,7 +27,6 @@ class App extends Component {
     return (
     <div className="container">  
       <div className="header">Gross Domestic Product</div>
-      <svg className="chart"></svg>
       {/* <GDPList list={this.state.data} /> */}
       <Chart data={this.state.data} />
       <div className="notes">{this.state.description}</div>

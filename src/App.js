@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-import GDPList from './GDPList';
-import Chart from './Chart';
+import BarChart from './BarChart';
 
 class App extends Component {
   constructor(props){
@@ -28,7 +27,8 @@ class App extends Component {
     <div className="container">  
       <div className="header">Gross Domestic Product</div>
       {/* <GDPList list={this.state.data} /> */}
-      <Chart data={this.state.data} />
+      <BarChart width={500} height={300} />
+      {/* <Chart data={this.state.data} /> */}
       <div className="notes">{this.state.description}</div>
     </div>
     
